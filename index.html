@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Stock Wallpapers - Modern Grid</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<link rel="stylesheet" href="css/style-main.css">
+<link rel="stylesheet" href="css/style-cards.css">
+</head>
+
+<body>
+
+<div class="fixed-bg"></div>
+<div class="scroll-glass-layer" id="glassLayer"></div>
+
+<header id="mainHeader">
+  <div class="brand interactive" style="height: auto; padding: 8px 14px;">
+    <i class="fa-solid fa-moon"></i> Stock Wallpapers
+  </div>
+  <nav>
+    <a class="interactive" data-menu="home"><i class="fa-brands fa-apple"></i> Apple</a>
+    <a class="interactive" data-menu="info"><i class="fa-brands fa-android"></i> Samsung</a>
+    <a class="interactive" data-menu="service"><i class="fa-brands fa-google"></i> Google</a>
+    <a class="interactive" data-menu="mail"><i class="fa-solid fa-chess-board"></i> 기타</a>
+  </nav>
+</header>
+
+<div class="floating-logo glass interactive" id="floatingLogo" style="height: 46px; padding: 0 20px;">
+  <i class="fa-solid fa-moon"></i> Stock Wallpapers
+</div>
+<div class="floating-menu glass" id="floatingMenu">
+  <a class="interactive" data-menu="home"><i class="fa-brands fa-apple"></i> Apple</a>
+  <a class="interactive" data-menu="info"><i class="fa-brands fa-android"></i> Samsung</a>
+  <a class="interactive" data-menu="service"><i class="fa-brands fa-google"></i> Google</a>
+  <a class="interactive" data-menu="mail"><i class="fa-solid fa-chess-board"></i> 기타</a>
+</div>
+<div class="mobile-floating glass" id="mobileFloating">
+  <a class="interactive" data-menu="home"><i class="fa-brands fa-apple"></i><span>Apple</span></a>
+  <a class="interactive" data-menu="info"><i class="fa-brands fa-android"></i><span>Samsung</span></a>
+  <a class="interactive" data-menu="service"><i class="fa-brands fa-google"></i><span>Google</span></a>
+  <a class="interactive" data-menu="mail"><i class="fa-solid fa-chess-board"></i><span>기타</span></a>
+</div>
+
+<section class="hero-text">
+  <h1>Stock Wallpapers</h1>
+  <p>다양한 브랜드의 기본 배경화면을 만나보세요!</p>
+</section>
+
+<section class="container">
+  
+  <div class="card carousel" id="carouselCard">
+    <div class="carousel-bg" id="carouselBg" style="background-image: url('https://picsum.photos/1200/600?random=10');"></div>
+    <div class="click-zone left" onclick="moveSlide(-1)"><i class="fa-solid fa-chevron-left"></i></div>
+    <div class="click-zone right" onclick="moveSlide(1)"><i class="fa-solid fa-chevron-right"></i></div>
+    <div class="carousel-content-box pos-center" id="carouselBox">
+      <h2 id="carouselTitle">Welcome</h2>
+      <p id="carouselDesc">슬라이드 설명 텍스트</p>
+      <a href="#" id="carouselBtn" class="slide-link-btn">자세히 보기 <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="carousel-indicators" id="indicators"></div>
+  </div>
+
+  <div class="card large-square">
+    <div class="content-wrapper">
+      <div class="badge">Featured</div>
+      <h2>Super Retina<br>XDR Display</h2>
+      <p>압도적인 디테일과 색감을 경험하세요.<br>새로운 차원의 시각적 경험.</p>
+      <div class="stats-row">
+        <div><span>4K</span><br><small>Resolution</small></div>
+        <div><span>120Hz</span><br><small>Refresh Rate</small></div>
+      </div>
+    </div>
+    <i class="fa-solid fa-bolt bg-icon"></i>
+  </div>
+
+  <div class="card tall">
+    <img src="https://picsum.photos/400/800?random=50">
+    <div class="tall-content">
+      <div class="icon-box"><i class="fa-solid fa-camera"></i></div>
+      <h3>Mobile<br>Photography</h3>
+      <p>세로로 긴 화면에 최적화된<br>모바일 갤러리 뷰입니다.</p>
+      <button class="small-btn">View</button>
+    </div>
+  </div>
+
+  <div class="card icon-a">
+    <i class="fa-solid fa-cloud"></i>
+    <div><h3>Cloud Sync</h3><div class="sub">Vertical Center</div></div>
+  </div>
+
+  <div class="card image">
+    <img src="https://picsum.photos/600/400?random=1"><div class="inner"><h3>이미지 카드</h3><div class="sub">기본형</div></div>
+  </div>
+
+  <div class="card bottom-right">
+    <img src="https://picsum.photos/600/400?random=20">
+    <div class="br-content"><h3>Modern Edge</h3><p>우측 하단 배치 디자인</p></div>
+  </div>
+
+  <div class="card text-only">
+    <div><h3>텍스트 카드</h3><p>깔끔한 타이포그래피 중심 디자인</p></div><div class="meta">Notice</div>
+  </div>
+
+  <div class="card icon-b">
+    <div class="icon-b-content"><i class="fa-solid fa-star"></i><div><h3>아이콘 카드 B</h3><div class="sub">좌측 아이콘</div></div></div>
+  </div>
+
+  <div class="card button">
+    <h3>버튼 카드</h3><div class="sub">상호작용</div><button>Click Me</button>
+  </div>
+
+  <div class="card wide">
+    <div class="left"><img src="https://picsum.photos/900/600?random=2"></div>
+    <div class="right">
+      <h3>확장 카드</h3><div class="sub">디자인 통일</div>
+      <p style="font-size:14px; opacity:0.8; line-height: 1.5;">이제 모든 카드가 0.6 투명도 배경을 공유합니다.</p>
+      <button style="margin-top:10px;">Action</button>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="divider"></div>
+  <p class="copyright">Copyright @ 2026 TeamSelenyx</p>
+</footer>
+
+<script src="js/script-main.js"></script>
+<script src="js/script-cards.js"></script>
+
+</body>
+</html>
