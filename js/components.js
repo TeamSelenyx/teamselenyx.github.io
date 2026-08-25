@@ -20,11 +20,11 @@
     if (headerContainer) {
         headerContainer.innerHTML = `
             <header class="header-nav">
-                <a href="${root}index.html" class="logo-btn">TeamSelenyx</a>
+                <a href="${root}/" class="logo-btn">TeamSelenyx</a>
                 <div class="desktop-menu-wrapper">
                     <ul class="desktop-menu">
                         <li>
-                            <a href="${root}index.html" class="${isHome ? 'active' : ''}">
+                            <a href="${root}/" class="${isHome ? 'active' : ''}">
                                 <i class="fa-solid fa-house"></i>
                                 <span>홈</span>
                             </a>
@@ -55,7 +55,7 @@
     if (mobileNavContainer) {
         mobileNavContainer.innerHTML = `
             <nav class="mobile-floating-nav" id="mobileNav">
-                <a href="${root}index.html" class="${isHome ? 'active' : ''}">
+                <a href="${root}/" class="${isHome ? 'active' : ''}">
                     <i class="fa-solid fa-house"></i>
                     <span>홈</span>
                 </a>
