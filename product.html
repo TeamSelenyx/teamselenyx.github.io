@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="referrer" content="no-referrer">
+    <title>TeamSelenyx - 상품 상세</title>
+    <link rel="icon" type="image/png" href="image/icon.png">
+    <link rel="apple-touch-icon" href="image/logo.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+    <div id="common-bg"></div>
+    <div id="common-header"></div>
+    <div id="common-mobile-nav"></div>
+
+    <!-- 상품 데이터가 동적으로 주입되는 메인 컨테이너 -->
+    <div class="container" id="productContainer">
+        <!-- 로딩 표시기 -->
+        <div class="detail-card" style="text-align: center; padding: 60px 20px;">
+            <i class="fa-solid fa-spinner fa-spin" style="font-size: 2rem; color: var(--primary-accent); margin-bottom: 12px;"></i>
+            <p style="color: var(--text-sub); font-weight: 600;">상품 정보를 불러오는 중입니다...</p>
+        </div>
+    </div>
+
+    <div id="common-footer"></div>
+
+    <!-- 원본 이미지 확대 모달 -->
+    <div class="image-modal-overlay" id="imageModal" onclick="closeImageModal()">
+        <button type="button" class="close-btn image-modal-close" onclick="closeImageModal()" aria-label="닫기">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="image-modal-content">
+            <img src="" id="modalImgTarget" alt="원본 이미지">
+        </div>
+    </div>
+
+    <script src="js/components.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

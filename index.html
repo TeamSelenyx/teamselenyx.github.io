@@ -1,135 +1,300 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Stock Wallpapers - Modern Grid</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TeamSelenyx</title>
+    <link rel="icon" type="image/png" href="image/icon.png">
+    <link rel="apple-touch-icon" href="image/logo.png">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-<link rel="stylesheet" href="css/style-main.css">
-<link rel="stylesheet" href="css/style-cards.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
 
-<div class="fixed-bg"></div>
-<div class="scroll-glass-layer" id="glassLayer"></div>
+    <div id="common-bg"></div>
+    <div id="common-header"></div>
+    <div id="common-mobile-nav"></div>
 
-<header id="mainHeader">
-  <div class="brand interactive" style="height: auto; padding: 8px 14px;">
-    <i class="fa-solid fa-moon"></i> Stock Wallpapers
-  </div>
-  <nav>
-    <a class="interactive" data-menu="home"><i class="fa-brands fa-apple"></i> Apple</a>
-    <a class="interactive" data-menu="info"><i class="fa-brands fa-android"></i> Samsung</a>
-    <a class="interactive" data-menu="service"><i class="fa-brands fa-google"></i> Google</a>
-    <a class="interactive" data-menu="mail"><i class="fa-solid fa-chess-board"></i> 기타</a>
-  </nav>
-</header>
+    <div class="container">
+        
+        <section id="home" class="hero-banner">
+            <div class="hero-content-glass">
+                <h1>Team Selenyx</h1>
+                <p>Minecraft와 관련된 상품들이 준비되어 있습니다.<br/>다양한 스타일의 Server Form, JSON UI 디자인을 만나보세요.</p>
+                <a href="store.html" class="hero-btn-link">스토어 둘러보기</a>
+            </div>
+        </section>
 
-<div class="floating-logo glass interactive" id="floatingLogo" style="height: 46px; padding: 0 20px;">
-  <i class="fa-solid fa-moon"></i> Stock Wallpapers
-</div>
-<div class="floating-menu glass" id="floatingMenu">
-  <a class="interactive" data-menu="home"><i class="fa-brands fa-apple"></i> Apple</a>
-  <a class="interactive" data-menu="info"><i class="fa-brands fa-android"></i> Samsung</a>
-  <a class="interactive" data-menu="service"><i class="fa-brands fa-google"></i> Google</a>
-  <a class="interactive" data-menu="mail"><i class="fa-solid fa-chess-board"></i> 기타</a>
-</div>
-<div class="mobile-floating glass" id="mobileFloating">
-  <a class="interactive" data-menu="home"><i class="fa-brands fa-apple"></i><span>Apple</span></a>
-  <a class="interactive" data-menu="info"><i class="fa-brands fa-android"></i><span>Samsung</span></a>
-  <a class="interactive" data-menu="service"><i class="fa-brands fa-google"></i><span>Google</span></a>
-  <a class="interactive" data-menu="mail"><i class="fa-solid fa-chess-board"></i><span>기타</span></a>
-</div>
+        <div class="section-divider"></div>
 
-<section class="hero-text">
-  <h1>Stock Wallpapers</h1>
-  <p>다양한 브랜드의 기본 배경화면을 만나보세요!</p>
-</section>
+        <section class="news-split-grid">
+            <article class="news-banner-card clickable-news-card" onclick="openNewsModalById('news-modal-0')">
+                <img src="image/product_image_00001.png" class="news-banner-bg">
+                <div class="news-banner-overlay"></div>
+                <div class="news-tag-top-left">
+                    <span class="tag-badge">공지</span>
+                </div>
+                <div class="news-banner-content">
+                    <h3 class="news-banner-title">TeamSelenyx 홈페이지 오픈</h3>
+                    <p class="news-banner-desc">새롭게 오픈하게된 TeamSelenyx 홈페이지를 반갑게 맞이해주세요!</p>
+                </div>
+            </article>
 
-<section class="container">
-  
-  <div class="card carousel" id="carouselCard">
-    <div class="carousel-bg" id="carouselBg" style="background-image: url('https://picsum.photos/1200/600?random=10');"></div>
-    <div class="click-zone left" onclick="moveSlide(-1)"><i class="fa-solid fa-chevron-left"></i></div>
-    <div class="click-zone right" onclick="moveSlide(1)"><i class="fa-solid fa-chevron-right"></i></div>
-    <div class="carousel-content-box pos-center" id="carouselBox">
-      <h2 id="carouselTitle">Welcome</h2>
-      <p id="carouselDesc">슬라이드 설명 텍스트</p>
-      <a href="#" id="carouselBtn" class="slide-link-btn">자세히 보기 <i class="fa-solid fa-arrow-right"></i></a>
+            <article class="news-banner-card clickable-news-card" onclick="openNewsModalById('news-modal-1')">
+                <img src="image/product_image_00002.png" class="news-banner-bg">
+                <div class="news-banner-overlay"></div>
+                <div class="news-tag-top-left">
+                    <span class="tag-badge">공지</span>
+                </div>
+                <div class="news-banner-content">
+                    <h3 class="news-banner-title">Luna X 공개</h3>
+                    <p class="news-banner-desc">PocketMine-MP의 파생형 구동기로 최신 버전 및 추가 기능을 지원합니다. 추후 업데이트로 다양한 기능도 지원될 예정입니다.</p>
+                </div>
+            </article>
+
+            <article class="news-banner-card clickable-news-card" onclick="openNewsModalById('news-modal-2')">
+                <img src="image/product_image_00004.png" class="news-banner-bg">
+                <div class="news-banner-overlay"></div>
+                <div class="news-tag-top-left">
+                    <span class="tag-badge">업데이트</span>
+                </div>
+                <div class="news-banner-content">
+                    <h3 class="news-banner-title">Korean Pack 버전 업데이트</h3>
+                    <p class="news-banner-desc">Minecraft 26.40에 맞게 업데이트 되었습니다.</p>
+                </div>
+            </article>
+
+            <article class="news-banner-card clickable-news-card" onclick="openNewsModalById('news-modal-3')">
+                <img src="image/product_image_00005.png" class="news-banner-bg">
+                <div class="news-banner-overlay"></div>
+                <div class="news-tag-top-left">
+                    <span class="tag-badge">공지</span>
+                    <span class="tag-badge">준비중</span>
+                </div>
+                <div class="news-banner-content">
+                    <h3 class="news-banner-title">Selenyx UI 공개 예정</h3>
+                    <p class="news-banner-desc">불편한 기능은 편하게, 필요없는 기능은 과감하게 제외하여 필요한 것들로만 모아봤습니다.</p>
+                </div>
+            </article>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="main-funding-card">
+            <div class="main-funding-media">
+                <div class="slider-wrapper ratio-16-9" id="mainFundingSlider">
+                    <img src="https://www.apple.com/newsroom/images/2025/09/apple-debuts-iphone-17/article/Apple-iPhone-17-color-lineup-250909_big.jpg.large_2x.jpg" class="slide-img active" alt="iPhone 17">
+                    <img src="https://images.samsung.com/sec/smartphones/galaxy-z-fold8/images/galaxy-z-fold8-features-kv.jpg?imbypass=true" class="slide-img" alt="Galaxy Z Fold8">
+                    <img src="https://images.samsung.com/sec/smartphones/galaxy-z-fold8-ultra/images/galaxy-z-fold8-ultra-features-kv.jpg?imbypass=true" class="slide-img" alt="Galaxy Z Fold8 Ultra">
+                    
+                    <button class="nav-btn prev-btn" onclick="moveFundingSlide(-1)" aria-label="이전 이미지">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-btn next-btn" onclick="moveFundingSlide(1)" aria-label="다음 이미지">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <div class="slider-dots-container" id="mainFundingDots">
+                        <div class="dot-item active"></div>
+                        <div class="dot-item"></div>
+                        <div class="dot-item"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-funding-content">
+                <div>
+                    <div class="modal-tag-container" style="margin-top: 0; margin-bottom: 8px;">
+                        <span class="tag-badge" style="position: static; display: inline-block;">새로운 기기</span>
+                    </div>
+
+                    <h2 class="main-funding-title">더 나은 개발을 위해</h2>
+                    <p class="main-funding-desc">
+                        상품을 구매해주시는 만큼 게이지가 채워집니다. 더 나은 개발과 테스트를 위해 여러가지 기기를 준비하고 있습니다.
+                    </p>
+
+                    <div class="modal-divider"></div>
+
+                    <div class="gauge-container" id="mainFundingGauge" data-current="10000" data-target="2400000" style="margin-top: 14px;">
+                        <div class="gauge-info-text">
+                            <span>달성률</span>
+                            <span class="gauge-percent" id="mainFundingPercent">0.00%</span>
+                        </div>
+                        <div class="gauge-bar-bg">
+                            <div class="gauge-bar-fill" id="mainGaugeFill"></div>
+                        </div>
+                        <div class="gauge-info-text" style="font-size:0.88rem; color:var(--text-sub); margin-top:4px;">
+                            <span id="mainFundingCurrentText">₩ 0</span>
+                            <span id="mainFundingTargetText">목표 ₩ 0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-funding-notice-btn">
+                    <i class="fa-solid fa-heart" style="color: var(--primary-accent); margin-right: 6px;"></i>
+                    <span>여러분의 구매가 큰 힘이 됩니다</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider" id="products"></div>
+
+        <section class="product-grid">
+            <article class="product-card">
+                <div class="product-card-media">
+                    <img src="image/product_image_00000.png" alt="Luna X">
+                    <div class="card-tag-wrapper">
+                        <span class="tag-badge">구동기</span>
+                        <span class="tag-badge">서버</span>
+                    </div>
+                </div>
+                <h3 class="product-card-title">Luna X</h3>
+                <p class="product-card-desc">Minecraft의 서버를 만들어 주는 커스텀 구동기</p>
+                <div class="product-card-footer">
+                    <span class="product-card-price">무료</span>
+                    <a href="https://github.com/TeamSelenyx/LunaX" target="_blank" class="btn-card-buy">자세히 보기</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-card-media">
+                    <img src="image/product_image_plus.png" alt="Korean Pack">
+                    <div class="card-tag-wrapper">
+                        <span class="tag-badge">한글 패치</span>
+                        <span class="tag-badge">추천</span>
+                    </div>
+                </div>
+                <h3 class="product-card-title">Korean Pack</h3>
+                <p class="product-card-desc">잘못된 한국어 번역을 올바르게 수정</p>
+                <div class="product-card-footer">
+                    <span class="product-card-price">무료</span>
+                    <a href="https://github.com/TeamSelenyx/KoreanPack/releases" target="_blank" class="btn-card-buy">자세히 보기</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-card-media">
+                    <img src="image/product_image_NewPauseScreen.png" alt="New Pause Screen">
+                    <div class="card-tag-wrapper">
+                        <span class="tag-badge">커스텀</span>
+                        <span class="tag-badge">일시 정지 화면</span>
+                    </div>
+                </div>
+                <h3 class="product-card-title">New Pause Screen</h3>
+                <p class="product-card-desc">나만의 일시 정지 화면!<br>가능한 범위 내 커스텀 지원</p>
+                <div class="product-card-footer">
+                    <span class="product-card-price">₩ 8,000 ~</span>
+                    <a href="product.html" class="btn-card-buy">자세히 보기</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="store-more-section">
+            <a href="store.html" class="btn-store-more">
+                <span>스토어에서 더 많은 상품 보기</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+
+        <div id="common-footer"></div>
     </div>
-    <div class="carousel-indicators" id="indicators"></div>
-  </div>
 
-  <div class="card large-square">
-    <div class="content-wrapper">
-      <div class="badge">Featured</div>
-      <h2>Super Retina<br>XDR Display</h2>
-      <p>압도적인 디테일과 색감을 경험하세요.<br>새로운 차원의 시각적 경험.</p>
-      <div class="stats-row">
-        <div><span>4K</span><br><small>Resolution</small></div>
-        <div><span>120Hz</span><br><small>Refresh Rate</small></div>
-      </div>
-    </div>
-    <i class="fa-solid fa-bolt bg-icon"></i>
-  </div>
+    <template id="news-modal-0">
+        <div class="news-modal-box">
+            <button type="button" class="close-btn" onclick="closeNewsModal()" aria-label="닫기">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="news-modal-media">
+                <img src="image/product_image_00001.png">
+            </div>
+            <div class="news-modal-header">
+                <span class="modal-tag-pill" style="margin: 0;">공지</span>
+                <span class="news-modal-meta"><i class="fa-regular fa-clock" style="margin-right: 4px;"></i>2026.08.00</span>
+            </div>
+            <h2 class="news-modal-title">TeamSelenyx 홈페이지 오픈</h2>
+            <div class="modal-divider" style="margin: 0;"></div>
+            <p class="news-modal-desc">Team Selenyx에서 만든 Minecraft 관련 파일들을 확인해보세요!
 
-  <div class="card tall">
-    <img src="https://picsum.photos/400/800?random=50">
-    <div class="tall-content">
-      <div class="icon-box"><i class="fa-solid fa-camera"></i></div>
-      <h3>Mobile<br>Photography</h3>
-      <p>세로로 긴 화면에 최적화된<br>모바일 갤러리 뷰입니다.</p>
-      <button class="small-btn">View</button>
-    </div>
-  </div>
+리소스 팩, 구동기 등등 여러가지를 준비해봤습니다. 확인해보시고 필요하실 때 구매 또는 다운로드 해보세요!</p>
+            <a href="store.html" target="_blank" class="news-modal-link-btn">
+                <span>스토어로 이동</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+    </template>
 
-  <div class="card icon-a">
-    <i class="fa-solid fa-cloud"></i>
-    <div><h3>Cloud Sync</h3><div class="sub">Vertical Center</div></div>
-  </div>
+    <template id="news-modal-1">
+        <div class="news-modal-box">
+            <button type="button" class="close-btn" onclick="closeNewsModal()" aria-label="닫기">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="news-modal-media">
+                <img src="image/product_image_00002.png">
+            </div>
+            <div class="news-modal-header">
+                <span class="modal-tag-pill" style="margin: 0;">업데이트</span>
+                <span class="news-modal-meta"><i class="fa-regular fa-clock" style="margin-right: 4px;"></i>2026.08.22</span>
+            </div>
+            <h2 class="news-modal-title">Luna X 버전 업데이트</h2>
+            <div class="modal-divider" style="margin: 0;"></div>
+            <p class="news-modal-desc">최신 Minecraft 버전에 맞춘 편의 기능 추가 및 서버 성능 최적화 패치가 완료되었습니다.
 
-  <div class="card image">
-    <img src="https://picsum.photos/600/400?random=1"><div class="inner"><h3>이미지 카드</h3><div class="sub">기본형</div></div>
-  </div>
+구동기 실행 속도가 이전 버전 대비 대폭 개선되었으며, 플러그인 로드 안정성이 향상되었습니다. 지금 바로 깃허브에서 최신 릴리즈 버전을 확인해보세요.</p>
+            <a href="https://github.com/TeamSelenyx/LunaX" target="_blank" class="news-modal-link-btn">
+                <span>GitHub에서 릴리즈 확인하기</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+    </template>
 
-  <div class="card bottom-right">
-    <img src="https://picsum.photos/600/400?random=20">
-    <div class="br-content"><h3>Modern Edge</h3><p>우측 하단 배치 디자인</p></div>
-  </div>
+    <template id="news-modal-2">
+        <div class="news-modal-box">
+            <button type="button" class="close-btn" onclick="closeNewsModal()" aria-label="닫기">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="news-modal-media">
+                <img src="image/product_image_00004.png">
+            </div>
+            <div class="news-modal-header">
+                <span class="modal-tag-pill" style="margin: 0;">업데이트</span>
+                <span class="news-modal-meta"><i class="fa-regular fa-clock" style="margin-right: 4px;"></i>2026.08.22</span>
+            </div>
+            <h2 class="news-modal-title">Korean Pack 버전 업데이트</h2>
+            <div class="modal-divider" style="margin: 0;"></div>
+            <p class="news-modal-desc">Minecraft 26.40 버전을 지원하며, Vanilla와 Ore UI 모두 최신 버전으로 적용되었습니다.
 
-  <div class="card text-only">
-    <div><h3>텍스트 카드</h3><p>깔끔한 타이포그래피 중심 디자인</p></div><div class="meta">Notice</div>
-  </div>
+새롭게 추가된 아이템이나 블록, UI 텍스트 등 오역들이나 알아보기 쉽도록 번역을 수정했습니다. 자세한 내용은 아래 버튼을 통해 확인해보세요!</p>
+            <a href="https://github.com/TeamSelenyx/KoreanPack/releases" target="_blank" class="news-modal-link-btn">
+                <span>자세히 보기</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+    </template>
 
-  <div class="card icon-b">
-    <div class="icon-b-content"><i class="fa-solid fa-star"></i><div><h3>아이콘 카드 B</h3><div class="sub">좌측 아이콘</div></div></div>
-  </div>
+    <template id="news-modal-3">
+        <div class="news-modal-box">
+            <button type="button" class="close-btn" onclick="closeNewsModal()" aria-label="닫기">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="news-modal-media">
+                <img src="image/product_image_00005.png">
+            </div>
+            <div class="news-modal-header">
+                <span class="modal-tag-pill" style="margin: 0;">공지</span>
+                <span class="news-modal-meta"><i class="fa-regular fa-clock" style="margin-right: 4px;"></i>2026.08.22</span>
+            </div>
+            <h2 class="news-modal-title">Selenyx UI 리소스 팩 공개 예정</h2>
+            <div class="modal-divider" style="margin: 0;"></div>
+            <p class="news-modal-desc">Minecraft를 플레이하면서 불편했거나 필요없는 기능들을 정리했습니다.
 
-  <div class="card button">
-    <h3>버튼 카드</h3><div class="sub">상호작용</div><button>Click Me</button>
-  </div>
+필요한 기능은 밖으로, 불필요한 기능들은 안으로 숨겨서 깔끔한 디자인으로 준비하고 있습니다! 기대해주세요!</p>
+        </div>
+    </template>
 
-  <div class="card wide">
-    <div class="left"><img src="https://picsum.photos/900/600?random=2"></div>
-    <div class="right">
-      <h3>확장 카드</h3><div class="sub">디자인 통일</div>
-      <p style="font-size:14px; opacity:0.8; line-height: 1.5;">이제 모든 카드가 0.6 투명도 배경을 공유합니다.</p>
-      <button style="margin-top:10px;">Action</button>
-    </div>
-  </div>
+    <div class="modal-overlay" id="productModal"></div>
 
-</section>
-
-<footer>
-  <div class="divider"></div>
-  <p class="copyright">Copyright @ 2026 TeamSelenyx</p>
-</footer>
-
-<script src="js/script-main.js"></script>
-<script src="js/script-cards.js"></script>
-
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,88 @@
+<section class="detail-top-grid">
+    <div class="detail-card detail-media-card">
+        <div class="slider-wrapper ratio-16-9" id="detailSlider">
+            <img src="image/product_image_plus.png" class="slide-img active" onclick="openImageModal(this.src)">
+            
+            <button type="button" class="nav-btn prev-btn" onclick="moveDetailSlide(-1)" aria-label="이전 이미지">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button type="button" class="nav-btn next-btn" onclick="moveDetailSlide(1)" aria-label="다음 이미지">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <div class="slider-dots-container" id="detailDots">
+                <div class="dot-item active" onclick="goToDetailSlide(0)"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-card detail-summary-card">
+        <div>
+            <div class="modal-tag-container detail-tags">
+                <span class="modal-tag-pill">한글 패치</span>
+                <span class="modal-tag-pill">추천</span>
+            </div>
+
+            <h1 class="detail-title">Korean Pack</h1>
+
+            <div class="modal-divider"></div>
+
+            <div class="modal-price-box">
+                <div class="modal-price-label">판매 가격</div>
+                <div class="single-price-box">
+                    <span class="single-price-val">무료</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-action-box">
+            <a href="https://github.com/TeamSelenyx/KoreanPack/releases" target="_blank" class="inquiry-btn detail-btn-link">
+                <i class="fa-solid fa-download"></i>
+                <span>다운로드</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="detail-card detail-info-card">
+    <h2 class="desc-heading">상품 정보</h2>
+    <div class="modal-divider"></div>
+    
+    <div class="info-grid-list">
+        <div class="info-item">
+            <span class="info-key"><i class="fa-solid fa-code-branch"></i> 리소스 팩 버전</span>
+            <span class="info-val">1.26.40</span>
+        </div>
+        <div class="info-item">
+            <span class="info-key"><i class="fa-solid fa-cube"></i> 지원되는 Minecraft 버전</span>
+            <span class="info-val">26.40 ~</span>
+        </div>
+        <div class="info-item">
+            <span class="info-key"><i class="fa-solid fa-layer-group"></i> 파일 형식</span>
+            <span class="info-val">.mcpack / .zip</span>
+        </div>
+        <div class="info-item">
+            <span class="info-key"><i class="fa-solid fa-clock-rotate-left"></i> 최근 업데이트</span>
+            <span class="info-val">2026.08.19</span>
+        </div>
+    </div>
+</section>
+
+<section class="detail-card detail-desc-card">
+    <h2 class="desc-heading">상품 설명</h2>
+    <div class="modal-divider"></div>
+    
+    <div class="desc-content-body">
+        <p>Minecraft의 잘못된 한국어 번역들을 올바른 번역으로 수정해주고, 새롭게 추가된 아이템이나 블록의 번역을 미리 추가하여 플레이할 때 불편함이 없도록 해주는 리소스 팩 입니다.</p>
+        
+        <h3 class="desc-subheading">주요 특징</h3>
+        <ul class="desc-feature-list">
+            <li><strong>Ore UI 대응:</strong> 기본 번역은 물론, Ore UI 부분도 지원하여 다양한 환경에서 올바른 번역을 확인할 수 있습니다.</li>
+            <li><strong>Vanilla 기반:</strong> 원래 언어 파일을 기준으로 수정 사항들을 적용하여 누락되는 번역 없이 수정하여 배포합니다.</li>
+            <li><strong>지속적인 업데이트:</strong> 새로운 Minecraft 버전이 업데이트 될 때마다 지속적으로 수정하고 업데이트하여 배포하고 있습니다.</li>
+        </ul>
+
+        <h3 class="desc-subheading">추천 사항</h3>
+        <p class="desc-notice">Plus 버전으로 다운로드 시 Vanilla 버전과 Ore UI 버전이 통합된 버전으로 다운로드 하실 수 있습니다.</p>
+    </div>
+</section>
