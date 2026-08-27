@@ -86,7 +86,7 @@
             <footer class="footer-section">
                 <div class="footer-brand">TeamSelenyx</div>
                 <p class="footer-text">Designed by NeroLuna</p>
-                <p class="footer-text"><small>2026.08.00004</small></p>
+                <p class="footer-text"><small>2026.08.00012</small></p>
             </footer>
         `;
     }
