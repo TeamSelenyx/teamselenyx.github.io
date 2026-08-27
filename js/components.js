@@ -6,7 +6,7 @@
     const isHome = currentPath.endsWith('index.html') || currentPath.endsWith('/') || currentPath === '';
     const isStore = currentPath.endsWith('store.html');
 
-    // 💡 상단 및 하단 그라데이션 오버레이가 포함된 고정 배경 주입
+    // 공통 배경 레이어 주입 (상·하단 그라데이션 포함)
     const bgContainer = document.getElementById('common-bg');
     if (bgContainer) {
         bgContainer.innerHTML = `
@@ -18,6 +18,7 @@
         `;
     }
 
+    // 상단 헤더 네비게이션 주입
     const headerContainer = document.getElementById('common-header');
     if (headerContainer) {
         headerContainer.innerHTML = `
@@ -53,6 +54,7 @@
         `;
     }
 
+    // 모바일 플로팅 메뉴 주입
     const mobileNavContainer = document.getElementById('common-mobile-nav');
     if (mobileNavContainer) {
         mobileNavContainer.innerHTML = `
@@ -77,6 +79,7 @@
         `;
     }
 
+    // 푸터 주입
     const footerContainer = document.getElementById('common-footer');
     if (footerContainer) {
         footerContainer.innerHTML = `
