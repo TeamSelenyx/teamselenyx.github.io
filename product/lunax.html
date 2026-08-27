@@ -1,0 +1,88 @@
+<section class="detail-top-grid">
+    <div class="detail-card detail-media-card">
+        <div class="slider-wrapper ratio-16-9" id="detailSlider">
+            <img src="image/product_image_plus.png" class="slide-img" onclick="openImageModal(this.src)">
+            
+            <button type="button" class="nav-btn prev-btn" onclick="moveDetailSlide(-1)" aria-label="이전 이미지">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button type="button" class="nav-btn next-btn" onclick="moveDetailSlide(1)" aria-label="다음 이미지">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <div class="slider-dots-container" id="detailDots">
+                <div class="dot-item active" onclick="goToDetailSlide(0)"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-card detail-summary-card">
+        <div>
+            <div class="modal-tag-container detail-tags">
+                <span class="modal-tag-pill">구동기</span>
+                <span class="modal-tag-pill">서버</span>
+            </div>
+
+            <h1 class="detail-title">Luna X</h1>
+
+            <div class="modal-divider"></div>
+
+            <div class="modal-price-box">
+                <div class="modal-price-label">판매 가격</div>
+                <div class="single-price-box">
+                    <span class="single-price-val">무료</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-action-box">
+            <a href="https://github.com/TeamSelenyx/LunaX/releases" target="_blank" class="inquiry-btn detail-btn-link">
+                <i class="fa-solid fa-download"></i>
+                <span>다운로드</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="detail-card detail-info-card">
+    <h2 class="desc-heading">상품 정보</h2>
+    <div class="modal-divider"></div>
+    
+    <div class="info-grid-list">
+        <div class="info-item">
+            <span class="info-key"><i class="fa-solid fa-code-branch"></i> 구동기 버전</span>
+            <span class="info-val">1.1.0</span>
+        </div>
+        <div class="info-item">
+            <span class="info-key"><i class="fa-solid fa-cube"></i> 지원되는 Minecraft 버전</span>
+            <span class="info-val">26.40 ~</span>
+        </div>
+        <div class="info-item">
+            <span class="info-key"><i class="fa-solid fa-layer-group"></i> 파일 형식</span>
+            <span class="info-val">.phar</span>
+        </div>
+        <div class="info-item">
+            <span class="info-key"><i class="fa-solid fa-clock-rotate-left"></i> 최근 업데이트</span>
+            <span class="info-val">2026.08.12</span>
+        </div>
+    </div>
+</section>
+
+<section class="detail-card detail-desc-card">
+    <h2 class="desc-heading">상품 설명</h2>
+    <div class="modal-divider"></div>
+    
+    <div class="desc-content-body">
+        <p>Minecraft의 유명한 구동기인 PocketMine-MP를 기반으로 일부 기능을 추가하고 버전 업데이트를 진행한 구동기 입니다. 현재는 Minecraft 버전 업데이트만 적용되어 있지만, 추후 새로운 기능들도 적용할 예정입니다.</p>
+        
+        <h3 class="desc-subheading">주요 특징</h3>
+        <ul class="desc-feature-list">
+            <li><strong>업데이트 제공:</strong> Minecraft 버전 업데이트는 물론, 버그 또는 최적화 업데이트 제공</li>
+            <li><strong>새로운 기능:</strong> </li>
+            <li><strong>업데이트 제공:</strong> 1회 구매 시 Minecraft 차후 업데이트 대응 패치 무료 지원</li>
+        </ul>
+
+        <h3 class="desc-subheading">구매 전 유의사항</h3>
+        <p class="desc-notice">개인용은 오로지 개인만 사용이 가능하며, 서버에서는 사용이 불가합니다. 서버용에 한에서만 서버 또는 개인이 이용하실 수 있습니다.</p>
+    </div>
+</section>

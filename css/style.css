@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap');
 
-/* --- [다크 반투명 글래스모피즘 기본 변수] --- */
 :root {
     --glass-bg: rgba(18, 18, 22, 0.42);
     --glass-card: rgba(22, 22, 26, 0.48);
@@ -9,14 +8,12 @@
     --glass-border: rgba(255, 255, 255, 0.16);
     --glass-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.35), inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
     
-    /* 생동감 있는 시안 블루 포인트 */
     --primary-accent: #00d2ff;
     --primary-glow: rgba(0, 210, 255, 0.25);
     
     --text-main: #ffffff;
     --text-sub: #e5e5ea;
 
-    /* 외곽 모서리 R값 */
     --card-radius: 24px;
 }
 
@@ -31,14 +28,17 @@
 html {
     scroll-behavior: smooth;
     background-color: #0b0b0e;
+    height: 100%;
 }
 
 body {
     color: var(--text-main);
+    min-height: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
     overflow-x: hidden; 
     position: relative;
-    padding-top: 95px;
+    padding-top: calc(95px + env(safe-area-inset-top));
     padding-bottom: calc(100px + env(safe-area-inset-bottom));
 }
 
@@ -47,11 +47,13 @@ body.scroll-lock {
     touch-action: none;
 }
 
-/* --- [고정 커스텀 배경 이미지 레이어] --- */
+/* 고정 커스텀 배경 이미지 레이어 */
 .fixed-bg-wrapper {
     position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
     z-index: -1;
     pointer-events: none;
 }
@@ -67,18 +69,35 @@ body.scroll-lock {
     will-change: filter;
 }
 
-.bottom-gradient-overlay {
+/* 💡 상단 안전 영역과 자연스럽게 연결되는 검은색 그라데이션 */
+.top-gradient-overlay {
     position: absolute;
-    bottom: 0; left: 0;
-    width: 100%; height: 40%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 100%);
+    top: 0; left: 0; right: 0;
+    width: 100%;
+    height: 25%;
+    max-height: 240px;
+    background: linear-gradient(to bottom, rgba(11, 11, 14, 0.95) 0%, rgba(11, 11, 14, 0.5) 45%, rgba(11, 11, 14, 0) 100%);
     pointer-events: none;
+    z-index: 1;
 }
 
-/* --- [상단 헤더 네비게이션] --- */
+/* 💡 하단 안전 영역과 자연스럽게 연결되는 검은색 그라데이션 */
+.bottom-gradient-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    width: 100%;
+    height: 35%;
+    max-height: 320px;
+    background: linear-gradient(to top, rgba(11, 11, 14, 0.95) 0%, rgba(11, 11, 14, 0.55) 50%, rgba(11, 11, 14, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 상단 헤더 네비게이션 */
 .header-nav {
     position: fixed;
-    top: 18px; left: 50%;
+    top: calc(18px + env(safe-area-inset-top));
+    left: 50%;
     transform: translateX(-50%);
     width: 94%; max-width: 1280px;
     height: 60px;
@@ -219,7 +238,7 @@ body.scroll-lock {
     color: #ffffff;
 }
 
-/* --- [모바일 하단 플로팅 메뉴] --- */
+/* 모바일 하단 플로팅 메뉴 */
 .mobile-floating-nav {
     display: none;
     position: fixed;
@@ -290,7 +309,7 @@ body.scroll-lock {
     box-shadow: 0 0 12px var(--primary-glow) !important;
 }
 
-/* --- [메인 레이아웃 및 카드 공통] --- */
+/* 레이아웃 공통 */
 .container {
     width: 90%;
     max-width: 1080px;
@@ -370,7 +389,7 @@ body.scroll-lock {
     background: rgba(0, 210, 255, 0.4);
 }
 
-/* --- [소식 카드 그리드] --- */
+/* 소식 카드 그리드 */
 .news-split-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -464,7 +483,7 @@ body.scroll-lock {
     word-break: keep-all;
 }
 
-/* --- [메인 독립형 펀딩 카드] --- */
+/* 펀딩 카드 */
 .main-funding-card {
     display: grid;
     grid-template-columns: 55% calc(45% - 24px);
@@ -551,7 +570,7 @@ body.scroll-lock {
     margin: 12px 0;
 }
 
-/* --- [스토어 헤더 카드] --- */
+/* 스토어 헤더 카드 */
 .store-header-card {
     width: 100%;
     background: var(--glass-card);
@@ -590,7 +609,7 @@ body.scroll-lock {
     word-break: keep-all;
 }
 
-/* --- [상품 카드 그리드] --- */
+/* 상품 카드 그리드 */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -713,7 +732,7 @@ body.scroll-lock {
     pointer-events: none; 
 }
 
-/* --- [스토어 더보기 버튼 섹션] --- */
+/* 스토어 더보기 버튼 */
 .store-more-section {
     width: 100%;
     display: flex;
@@ -761,7 +780,7 @@ body.scroll-lock {
     background: rgba(0, 210, 255, 0.35);
 }
 
-/* --- [푸터] --- */
+/* 푸터 */
 .footer-section {
     margin-top: 16px;
     padding-top: 24px;
@@ -787,7 +806,7 @@ body.scroll-lock {
     font-weight: 500;
 }
 
-/* --- [모달 공통 레이어 및 소식 모달 박스] --- */
+/* 모달 공통 */
 .modal-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -986,7 +1005,6 @@ body.scroll-lock {
     border-radius: 999px;
 }
 
-/* 💡 FontAwesome 아이콘 중앙 정렬 지원 nav-btn */
 .nav-btn {
     position: absolute;
     top: 50%;
@@ -1059,16 +1077,15 @@ body.scroll-lock {
     font-weight: 800;
 }
 
-/* ========================================== */
-/* 📱 [모바일 및 태블릿 최적화 미디어 쿼리] */
-/* ========================================== */
+/* 반응형 최적화 */
 @media (max-width: 820px) {
     body {
-        padding-top: 76px;
+        padding-top: calc(76px + env(safe-area-inset-top));
     }
 
     .header-nav {
-        left: 16px; top: 16px;
+        left: calc(16px + env(safe-area-inset-left));
+        top: calc(16px + env(safe-area-inset-top));
         transform: none;
         width: auto; height: 48px;
         padding: 6px;

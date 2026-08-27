@@ -6,11 +6,13 @@
     const isHome = currentPath.endsWith('index.html') || currentPath.endsWith('/') || currentPath === '';
     const isStore = currentPath.endsWith('store.html');
 
+    // 💡 상단 및 하단 그라데이션 오버레이가 포함된 고정 배경 주입
     const bgContainer = document.getElementById('common-bg');
     if (bgContainer) {
         bgContainer.innerHTML = `
             <div class="fixed-bg-wrapper">
                 <div class="custom-bg-img" id="customBg"></div>
+                <div class="top-gradient-overlay"></div>
                 <div class="bottom-gradient-overlay"></div>
             </div>
         `;
@@ -20,11 +22,11 @@
     if (headerContainer) {
         headerContainer.innerHTML = `
             <header class="header-nav">
-                <a href="/" class="logo-btn">TeamSelenyx</a>
+                <a href="${root}index.html" class="logo-btn">TeamSelenyx</a>
                 <div class="desktop-menu-wrapper">
                     <ul class="desktop-menu">
                         <li>
-                            <a href="/" class="${isHome ? 'active' : ''}">
+                            <a href="${root}index.html" class="${isHome ? 'active' : ''}">
                                 <i class="fa-solid fa-house"></i>
                                 <span>홈</span>
                             </a>
@@ -55,7 +57,7 @@
     if (mobileNavContainer) {
         mobileNavContainer.innerHTML = `
             <nav class="mobile-floating-nav" id="mobileNav">
-                <a href="/" class="${isHome ? 'active' : ''}">
+                <a href="${root}index.html" class="${isHome ? 'active' : ''}">
                     <i class="fa-solid fa-house"></i>
                     <span>홈</span>
                 </a>
