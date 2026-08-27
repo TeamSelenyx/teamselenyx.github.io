@@ -25,18 +25,20 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+/* 상단 연한 하늘색 -> 하단 연한 초록색 바탕 그라데이션 */
 html {
     scroll-behavior: smooth;
-    background-color: #0b0b0e;
-    margin: 0;
-    padding: 0;
-    min-height: 100dvh;
-    min-height: 100vh;
+    min-height: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #c3e0fc 0%, #bdeed7 50%, #c4f4cb 100%) no-repeat fixed;
+    background-size: cover;
 }
 
 body {
     color: var(--text-main);
-    width: 100%;
+    background: transparent !important;
+    min-height: 100%;
+    min-height: 100vh;
     min-height: 100dvh;
     overflow-x: hidden; 
     position: relative;
@@ -49,7 +51,7 @@ body.scroll-lock {
     touch-action: none;
 }
 
-/* 고정 배경 래퍼 (가장자리 잘림 방지 및 뷰포트 일치) */
+/* 고정 배경 래퍼 */
 .fixed-bg-wrapper {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -61,12 +63,11 @@ body.scroll-lock {
     overflow: hidden;
 }
 
-/* 블러 테두리 잔상 제거용 스케일링 */
+/* 배경 이미지 레이어 */
 .custom-bg-img {
     position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 108%; height: 100dvh;
+    top: -4%; left: -4%;
+    width: 108%; height: 108%;
     background-image: url('../image/background.png');
     background-size: cover;
     background-position: center;
@@ -77,7 +78,7 @@ body.scroll-lock {
     transform: scale(1.04);
 }
 
-/* 데스크톱에서는 상/하단 그라데이션 숨김 */
+/* 기본 상태(PC)에서는 안전 영역 그라데이션 비활성화 */
 .top-gradient-overlay,
 .bottom-gradient-overlay {
     display: none;
@@ -1075,29 +1076,36 @@ body.scroll-lock {
         padding-top: calc(76px + env(safe-area-inset-top));
     }
 
-    /* 💡 모바일에서만 상단/하단 부드러운 검은색 그라데이션 노출 */
+    /* 💡 모바일 상단: 상태 표시줄/노치 영역에서 화면 안쪽으로 자연스럽게 페이드아웃되는 점진적 블러 그라데이션 */
     .top-gradient-overlay {
         display: block;
-        position: absolute;
+        position: fixed;
         top: 0; left: 0; right: 0;
         width: 100%;
-        height: 28%;
-        max-height: 260px;
-        background: linear-gradient(to bottom, rgba(11, 11, 14, 0.95) 0%, rgba(11, 11, 14, 0.45) 50%, rgba(11, 11, 14, 0) 100%);
+        height: calc(env(safe-area-inset-top) + 48px);
+        background: linear-gradient(to bottom, rgba(11, 11, 14, 0.75) 0%, rgba(11, 11, 14, 0.3) 55%, transparent 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 45%, rgba(0, 0, 0, 0) 100%);
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 45%, rgba(0, 0, 0, 0) 100%);
         pointer-events: none;
-        z-index: 1;
+        z-index: 900;
     }
 
+    /* 💡 모바일 하단: 홈 바 영역에서 위쪽으로 자연스럽게 페이드아웃되는 점진적 블러 그라데이션 */
     .bottom-gradient-overlay {
         display: block;
-        position: absolute;
+        position: fixed;
         bottom: 0; left: 0; right: 0;
         width: 100%;
-        height: 35%;
-        max-height: 320px;
-        background: linear-gradient(to top, rgba(11, 11, 14, 0.95) 0%, rgba(11, 11, 14, 0.5) 55%, rgba(11, 11, 14, 0) 100%);
+        height: calc(env(safe-area-inset-bottom) + 54px);
+        background: linear-gradient(to top, rgba(11, 11, 14, 0.85) 0%, rgba(11, 11, 14, 0.35) 55%, transparent 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 45%, rgba(0, 0, 0, 0) 100%);
+        mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 45%, rgba(0, 0, 0, 0) 100%);
         pointer-events: none;
-        z-index: 1;
+        z-index: 900;
     }
 
     .header-nav {
