@@ -23,11 +23,11 @@
     if (headerContainer) {
         headerContainer.innerHTML = `
             <header class="header-nav">
-                <a href="${root}index.html" class="logo-btn">TeamSelenyx</a>
+                <a href="/" class="logo-btn">TeamSelenyx</a>
                 <div class="desktop-menu-wrapper">
                     <ul class="desktop-menu">
                         <li>
-                            <a href="${root}index.html" class="${isHome ? 'active' : ''}">
+                            <a href="/" class="${isHome ? 'active' : ''}">
                                 <i class="fa-solid fa-house"></i>
                                 <span>홈</span>
                             </a>
@@ -59,7 +59,7 @@
     if (mobileNavContainer) {
         mobileNavContainer.innerHTML = `
             <nav class="mobile-floating-nav" id="mobileNav">
-                <a href="${root}index.html" class="${isHome ? 'active' : ''}">
+                <a href="/" class="${isHome ? 'active' : ''}">
                     <i class="fa-solid fa-house"></i>
                     <span>홈</span>
                 </a>
@@ -86,7 +86,7 @@
             <footer class="footer-section">
                 <div class="footer-brand">TeamSelenyx</div>
                 <p class="footer-text">Designed by NeroLuna</p>
-                <p class="footer-text"><small>2026.08.00012</small></p>
+                <p class="footer-text"><small>2026.08.00020</small></p>
             </footer>
         `;
     }
