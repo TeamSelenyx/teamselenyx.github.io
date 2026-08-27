@@ -62,6 +62,8 @@ body.scroll-lock {
 /* 블러 테두리 잔상 제거용 스케일링 */
 .custom-bg-img {
     position: absolute;
+    margin: 0;
+    padding: 0;
     width: 108%; min-height: 100dvh;
     background-image: url('../image/background.png');
     background-size: cover;
